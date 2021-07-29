@@ -1,6 +1,13 @@
 # Functionality
 
+1. 点击左右箭头/原点可以跳到对应的card并停止循环播放；
+2. 点击Change/1s/3s/5s可以重新启动循环播放；
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# demo
+
+[demo](/src/assets/demo.gif)
 
 ## Available Scripts
 
