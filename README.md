@@ -4,6 +4,20 @@
 2. 点击Change/1s/3s/5s可以重新启动循环播放；
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Problems
+### 手动点击左右箭头/原点跳到对应的card后又重新启动了循环播放
+
+原因：cardIdx发生了变化，触发useEffect hook，有启动了一次定时器，且新的定时器的id与前一次的id不同，无法在useEffect外部清除定时器（使用了setTimeout延迟stopAutoPlay方法也无效）
+
+解决：使用useRef hook创建一个id，在useEffect内用id.current保存定时器id，同时useState定义一个manual变量，初始值为false，表示初次渲染时启用autoplay；然后在停止循环播放/点击左右箭头/点击原点的相关方法中将manual设为true，同时在useEffect中加一个if条件语句，如果是手动触发card切换/点击停止按钮就清除定时器
+
+后续可能的扩展点Todo List：
+1.手动添加card内容；
+2.transition动画优化（大小渐变/滑动切换）；
+3.鼠标拖动切换card；
+...
+
 ## Available Scripts
 
 (First, make sure you run `npm install` to get all of the dependencies.) In the project directory, you can run:
