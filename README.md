@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # demo
 
-[demo](/src/assets/demo.gif)
+[demo](https://github.com/HaibiPeng/react-carousel-demo/blob/master/src/assets/demo.gif?raw=true)
 
 ## Available Scripts
 
