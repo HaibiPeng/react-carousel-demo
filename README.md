@@ -4,11 +4,6 @@
 2. 点击Change/1s/3s/5s可以重新启动循环播放；
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-# demo
-
-[demo](https://github.com/HaibiPeng/react-carousel-demo/blob/master/src/assets/demo.gif?raw=true)
-
 ## Available Scripts
 
 (First, make sure you run `npm install` to get all of the dependencies.) In the project directory, you can run:
