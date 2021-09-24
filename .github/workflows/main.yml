@@ -30,7 +30,7 @@ jobs:
             email: "haibi.peng@aalto.fi"
             api_key: ${{secrets.HEROKU_API_KEY}}
             app_name: "react-carousel-haibi" #Must be unique in Heroku
-            dockerfile: ../../
+            dockerfile: /Users/jdszsl/Desktop/Aalto/Aalto-CommunicationsEngineering/2nd_year/Docker/part3/react-carousel-demo/
 
             
 
