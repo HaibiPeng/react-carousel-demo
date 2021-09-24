@@ -31,7 +31,7 @@ jobs:
             heroku_app_name: "react-carousel-haibi" #Must be unique in Heroku
             heroku_email: "haibi.peng@aalto.fi"
             usedocker: true
-            dockerfile_directory: ./
+            dockerfile_directory: ../../Dockerfile
             dockerfile_name: Dockerfile
             docker_options: "--no-cache"
             process_type: web
