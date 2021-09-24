@@ -31,7 +31,7 @@ jobs:
             appdir: "."
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
             heroku_app_name: "react-carousel-haibi" #Must be unique in Heroku
-            dockerfile: ./../../
+            usedocker: true
 
             
 
