@@ -28,7 +28,7 @@ jobs:
         uses: jctaveras/heroku-deploy@v1.0.0 # This is the action
         with:
             api_key: ${{secrets.HEROKU_API_KEY}}
-            pp_name: "react-carousel-haibi" #Must be unique in Heroku
+            app_name: "react-carousel-haibi" #Must be unique in Heroku
             email: "haibi.peng@aalto.fi"
             dockerfile_path: ../../Dockerfile
 
