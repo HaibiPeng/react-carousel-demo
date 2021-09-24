@@ -6,7 +6,7 @@ name: Pipeline to Heroku
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: master
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -28,7 +28,7 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
             heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-            heroku_app_name: "react-carousel" #Must be unique in Heroku
+            heroku_app_name: "react-carousel-haibi" #Must be unique in Heroku
             heroku_email: "haibi.peng@aalto.fi"
             usedocker: true
             dockerfile_directory: ./
