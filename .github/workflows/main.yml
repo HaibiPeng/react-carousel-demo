@@ -27,7 +27,7 @@ jobs:
       - name: Build, Push and Release a Docker container to Heroku
         env:
           HEROKU_APP_NAME: react-carousel-haibi
-          DOCKERFILE_DIRECTORY: "."
+          DOCKERFILE_DIRECTORY: "./"
           HEROKU_EMAIL: haibi.peng@aalto.fi
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
           DOCKERFILE_NAME: "Dockerfile"
@@ -35,17 +35,17 @@ jobs:
         run: |
           pwd
           ls -la
-          # cd ${DOCKERFILE_DIRECTORY}
-          # echo ${HEROKU_API_KEY} | docker login \
-          #   --username=${HEROKU_EMAIL} \
-          #   registry.heroku.com \
-          #   --password-stdin
-          # docker build \
-          #   --file ${DOCKERFILE_NAME} \
-          #   ${DOCKER_OPTIONS} \
-          #   --tag registry.heroku.com/${HEROKU_APP_NAME}/web .
-          # heroku container:push web --app ${HEROKU_APP_NAME}
-          # heroku container:release web --app ${HEROKU_APP_NAME}
+          cd ${DOCKERFILE_DIRECTORY}
+          echo ${HEROKU_API_KEY} | docker login \
+            --username=${HEROKU_EMAIL} \
+            registry.heroku.com \
+            --password-stdin
+          docker build \
+            --file ${DOCKERFILE_NAME} \
+            ${DOCKER_OPTIONS} \
+            --tag registry.heroku.com/${HEROKU_APP_NAME}/web .
+          heroku container:push web --app ${HEROKU_APP_NAME}
+          heroku container:release web --app ${HEROKU_APP_NAME}
 
             
 
