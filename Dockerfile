@@ -7,7 +7,7 @@ RUN apt install -y nodejs
 EXPOSE 3000
 
 WORKDIR /usr/src/app
-COPY ./react-carousel-demo ./
+COPY ../react-carousel-demo ./
 
 RUN npm install
 RUN npm audit fix
